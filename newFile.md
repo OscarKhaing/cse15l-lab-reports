@@ -15,7 +15,9 @@ this list is in a block!
 
 
 ---
-This file can be accessed at [https://OscarKhaing.github.io/cse-15l-lab-report/newFile.md](https://OscarKhaing.github.io/cse-15l-lab-report/newFile.md)	
+This file can be accessed at [https://OscarKhaing.github.io/cse-15l-lab-report/newFile.md](https://OscarKhaing.github.io/cse-15l-lab-report/newFile.md). 
+
+
 The other file, index, can be accessed at [https://OscarKhaing.github.io/cse-15l-lab-report/index.md](https://OscarKhaing.github.io/cse-15l-lab-report/index.md)
 
 Here's a quote from `Arnold Schwarzenegger`
