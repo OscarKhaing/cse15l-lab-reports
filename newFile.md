@@ -1,7 +1,11 @@
 # Hello new file!
 ## I will do some markdown texts in this file
 *This is italic*
+
+
 **This is bold**
+
+
 * List item 1
 * List item 2
 * List item 3
