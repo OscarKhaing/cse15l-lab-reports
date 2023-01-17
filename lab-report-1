@@ -1,0 +1,7 @@
+##1. Installing VScode
+Firstly, we need a terminal to work with. For this, I like to use VS Code because it has a very friendly interface. The computer I worked with on the lab day already had it installed. After having it on your computer, launch it; it should look something like this when it opens:
+
+![Image](https://github.com/OscarKhaing/cse15l-lab-reports/blob/main/vscode.JPG?raw=true)
+
+Go to the top left corner menu, click on *Terminal*, and click on *New Terminal*. It would open a terminal window for you. By default, it will be on Windows Powershell, but you want to work with Bash instead. To switch, click on the arrow beside the *+* sign at bottom right, and click on Bash. It should look something like this:
+
