@@ -62,12 +62,16 @@ Some common commands you can try are:
 * cd
 * ls 
 * ls <directory> 
+* touch
 * echo
 * rm
   
-You can see my attempt at playing around with the shell below (I did not know what I was doing):
+You can see my attempt at playing around with the shell below. I basically created some text files, edited the file, and deleted them. I also tried to delete a folder but failed. As you can probably tell, I did not know what I was doing.
   
 ![image](https://user-images.githubusercontent.com/117701031/212816385-485910ff-c5c0-4020-82f3-b2d9bf390bdb.png)
+
+In case you were wondering, you have to add ```-r``` after ```rm``` to remove a folder (i.e. directory).
+```rm -r perl5```
 
 # Logging out
 To log out, you can use ```Ctrl+D``` or ```exit```
