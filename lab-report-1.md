@@ -34,7 +34,22 @@ Under “Student ID,” simply enter the 9 digit UCSD PID (including the ‘A’
 
 Click “Submit” to search query.
 
-##2. Initialize password
+## 2. Initialize password
 
 If you’re logging in for the first time, click “change your password” to initialize a passphrase that you will use to log into your account on command line later. A thing to note is that after you finish typing in your new password a second time, click *Enter* on your keyboard directly. Clicking on *Check Password* will only erase what you typed.
 ![Image](https://github.com/OscarKhaing/cse15l-lab-reports/blob/main/2-account-search.JPG)
+
+
+After setting your password, it takes about 15 minutes or longer for the server to update. Then, you can begin logging into the Linux shell via the command line.
+
+## 3. Logging in
+Open a new Bash terminal in VS Code, and type in the following line, but replace [youraccount] with your account.
+```
+$ ssh [youraccount]@ieng6.ucsd.edu
+```
+Then, enter the password you set in step 2. It is intentional that the password you are typing in does not show up on the screen; this way, no one else can see it.
+
+
+Wait for it to connect. It might take anywhere between 5 seconds to 5 minutes. It should look something like below after it finishes connecting.
+
+![image](https://user-images.githubusercontent.com/117701031/212815644-65b276b8-9747-4a28-904e-1078b533b425.png)
