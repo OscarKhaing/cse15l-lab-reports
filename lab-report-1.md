@@ -65,7 +65,11 @@ Some common commands you can try are:
 * echo
 * rm
   
-You can see my attempt at playing around with the shell below:
+You can see my attempt at playing around with the shell below (I did not know what I was doing):
   
 ![image](https://user-images.githubusercontent.com/117701031/212816385-485910ff-c5c0-4020-82f3-b2d9bf390bdb.png)
 
+# Logging out
+To log out, you can use ```Ctrl+D``` or ```exit```
+
+Hope you had fun in this tutorial!
