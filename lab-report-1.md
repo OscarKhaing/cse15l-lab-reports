@@ -53,3 +53,19 @@ Then, enter the password you set in step 2. It is intentional that the password 
 Wait for it to connect. It might take anywhere between 5 seconds to 5 minutes. It should look something like below after it finishes connecting.
 
 ![image](https://user-images.githubusercontent.com/117701031/212815644-65b276b8-9747-4a28-904e-1078b533b425.png)
+
+
+# 3. Trying some commands
+You are free to try out some commands as you'd like! Play around with creating and deleting files, editing them, and more!
+Some common commands you can try are:
+* cd ~
+* cd
+* ls 
+* ls <directory> 
+* echo
+* rm
+  
+You can see my attempt at playing around with the shell below:
+  
+![image](https://user-images.githubusercontent.com/117701031/212816385-485910ff-c5c0-4020-82f3-b2d9bf390bdb.png)
+
