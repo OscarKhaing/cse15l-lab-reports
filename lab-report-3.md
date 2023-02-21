@@ -37,7 +37,7 @@ Let's first set up the environment. For this demonstration, I will be using the 
 
 Our operations will mainly be done on this `written_2/` directory.
 
-## Option: `grep -r`
+# Option 1: `grep -r`
 An option we will look into is `-r`, `--recursive`. This option was chosen from the guide returned by the aforementioned `grep --help` command, under the **"Output control"** section.
 
 As you can tell, the syntax of grep actually takes in individual files as the targets to search. If one uses a directory in place of a file name, the following error is returned:
@@ -52,6 +52,7 @@ To make this happen more easily, one can use the `-r` option
 grep -r 'pattern' directory/
 ```
 
+## Example 1
 For the first example, I searched for the word **"Dizengoff Street"** in all the files in `written_2/` recursively, and it successfully returns **all** the lines from **all** the files in `written_2/` that contain that word. The first part of each line indicates the absolute paths of the files that the phrase **"Dizengoff Street"** is found in, and the second part prints out the individual lines in each file that contains the phrase.
 ```
 $ grep -r 'Dizengoff Street' ./
@@ -68,6 +69,7 @@ As we can see, there are 3 different files that contain that word:
 
 And we easily found all of the files and the surrounding lines in one line of command.
 
+## Example 2
 For the second example, I searched for the word **"Sabbath"** instead. 
 
 ```
@@ -95,8 +97,12 @@ drugs,33 or for keeping one’s children out of school in violation of truancy l
 
 This time, even though it does indeed find the files for us, the texts it prints are not so user-friendly, because there're simply too much. So, this is the perfect time segue into our next **option** and introduce:
 
-## Option: `grep -l`
-`-l`, '--files-with-matches' essentially prints out only the name of the files, and omit the surrounding texts that grep normally prints. For a side by side comparison, let's try to find the phrase **"Sabbath"** again, this time with both the **recursive** search option and the **list** option.
+# Option 2: `grep -l`
+`-l`, '--files-with-matches' essentially prints out only the name of the files, and omit the surrounding texts that grep normally prints. 
+
+## Example 1
+
+For a side by side comparison, let's try to find the phrase **"Sabbath"** again, this time with both the **recursive** search option and the **list** option.
 
 ```
 $ grep -lr 'Sabbath' ./
@@ -109,9 +115,12 @@ $ grep -lr 'Sabbath' ./
 ./travel_guides/berlitz1/WhereToJerusalem.txt
 ```
 
-There we go! So much cleaner and calming to look at. 
+There we go! So much cleaner and calming to look at. Here, grep essentially ditches the surrounding texts and only output the absolute paths of the files where the pattern was found.
 
 > To use more than one command-line options, put the letters that indicate each option in succession as the `-rl` shown above, or separately `-r -l`. The order does not matter, `-rl`,`-r -l`, `-l -r`, and `-lr` prints the same results. 
+
+
+## Example 2
 
 For the second example, let's try to find the string **"Stupid"** amongst the files:
 
@@ -132,11 +141,11 @@ which shows us 3 files instead of 1 that contains the word **"stupid"**.
 
 In some real scenarios, we care more about the content of the word that we're searching for instead of the format and specificities. In that case, we can use the following option: 
 
-## Option: `grep -i`
+# Option 3: `grep -i`
 
 The option `-i`, `--ignore-case` tells `grep` to ignore the uppercase and lowercase distinction. 
 
-
+## Example 1
 For our first example, we will look at the search results without option `-i` for the words **"Crazy"** and **"crazy"**, respectively. Then, we will compare those results with the results from searching for **"cRaZy"** using option `-i`.
 
 Search result for **"Crazy"**:
@@ -169,6 +178,9 @@ $ grep -l -r  'crazy' ./
 ./travel_guides/berlitz2/Canada-WhereToGo.txt
 ```
 
+Although some of the files do contain both **"Crazy"** and **"crazy"**, we can clearly see that the returned results from both of those searches all appear in the search using option `-i`. 
+
+
 Search results for **"cRaZy"**, with option `-i`:
 ```
 $ grep -l -r -i 'cRaZy' ./
@@ -191,3 +203,5 @@ $ grep -l -r -i 'cRaZy' ./
 ./travel_guides/berlitz2/Canada-WhereToGo.txt
 ./travel_guides/berlitz2/Paris-WhatToDo.txt
 ```
+
+This is useful mainly in scenarios where the meaning of the string we search for is more important than its technicalities, like text analysis.
