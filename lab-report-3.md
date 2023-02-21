@@ -7,10 +7,24 @@ One of those commands is `grep`, which is used for finding patterns within files
 > `grep` stands for "Global regular expression print"
 
 To use it, we use the following syntax format:
-```
-![image](https://user-images.githubusercontent.com/117701031/220244234-157e1ad9-7e0d-42b0-b8fe-6147db0a9bb5.png)
 
 ```
+grep [OPTION]... PATTERN [FILE]...
+```
+
+* **`[OPTION]`** will be one of the things we look at today.
+* **`PATTERN`** is the pattern you are looking for, which must be in single quotation marks
+* **[FILE]** must be the name(s) of the file(s) in which you want to search for the pattern 
+
+There can be multiple command-line arguments for **`option`** and **`file`**, as indicated by the ellipsis "..." 
+
+> General tip for _bash_:
+> When using a command you are not familiar with, you can use
+> `[whatever-command-you-use] --help`
+> to ask _bash_ to print a guide for the command, as seen below.
+
+
+![image](https://user-images.githubusercontent.com/117701031/220244234-157e1ad9-7e0d-42b0-b8fe-6147db0a9bb5.png)
 
 
 
@@ -22,5 +36,7 @@ Let's first set up the environment. For this demonstration, I will be using the 
 
 Our operations will mainly be done on this `written_2/` directory.
 
-## Option 1: grep -r
-Firstly, I find
+## Option: grep -r
+An option we will look into is `-r`, `--recursive`. 
+
+As you can tell, the syntax of grep actually takes in files as the targets to search
