@@ -111,7 +111,7 @@ $ grep -lr 'Sabbath' ./
 
 There we go! So much cleaner and calming to look at. 
 
-> To use more than one command-line options, put the letters that indicate each option in succession as the `-rl` shown above. The order does not matter, `-rl` and `-lr` prints the same results. 
+> To use more than one command-line options, put the letters that indicate each option in succession as the `-rl` shown above, or separately `-r -l`. The order does not matter, `-rl`,`-r -l`, `-l -r`, and `-lr` prints the same results. 
 
 For the second example, let's try to find the string **"Stupid"** amongst the files:
 
