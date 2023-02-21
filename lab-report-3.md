@@ -271,7 +271,7 @@ This is extremely useful in cases where you want to process the output directly 
 
 ## Example 2
 
-As mentioned before, `-i` is useful for when content and meaning is more important than the phrase's technicalities. In combination with option `-h`, one can find all the relevant texts in a bundle of files and directories using one line of command and redirect the output elsewhere for analysis. 
+As mentioned before, `-i` is useful for when content and meaning is more important than the phrase's technicalities. 
 
 ```
 $ grep -r -h -i 'Crazy' ./
@@ -311,5 +311,8 @@ Azores to land up in the English seaside town of Margate.
 Floor shows keep the “naughty” image of Paris alive. The Folies Bergères (rue Richer), which launched the careers of Josephine Baker, Mistinguett, and Maurice 
 Chevalier, and the Lido on the Champs-Elysées are both classic survivors. The most famous modern-day floor show, erotic, brilliantly choreographed, and bordering on chic, is at the Crazy Horse Saloon (avenue George V). Toulouse-Lautrec painted the showgirls of the Moulin Rouge (place Blanche) a century ago, and it still offers tourists a boisterous floor show in the old tradition. The rest of Pigalle plumbs the lower depths with a certain fascinating glee.
 ```
+
+In combination with option `-h`, one can find all the relevant texts in a bundle of files and directories using one line of command and redirect the output elsewhere for analysis. This can greatly help researchers eliminate the need for a step of manual deletion of these paths from the search results, and boost their efficiency.
+
 
 ## That concludes my guide to 4 of the useful command-line options for `grep`. Hope you had fun and learned something new on this page!  
