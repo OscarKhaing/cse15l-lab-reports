@@ -3,7 +3,7 @@
 ## First, what is `grep`?
 Linux has been a popular choice of operating system due to its inherent stability. When operating in a linux shell, users must manipulate files through a terminal using a variety of commands. 
 
-One of those commands is `grep`, which is used for finding patterns within files.
+One of those commands is `grep`, which is used for finding patterns within files. It will return the line in the file that contains the specified pattern.
 > `grep` stands for "Global regular expression print"
 
 To use it, we use the following syntax format:
@@ -39,4 +39,16 @@ Our operations will mainly be done on this `written_2/` directory.
 ## Option: grep -r
 An option we will look into is `-r`, `--recursive`. 
 
-As you can tell, the syntax of grep actually takes in files as the targets to search
+As you can tell, the syntax of grep actually takes in individual files as the targets to search. If one uses a directory in place of a file name, the following error is returned:
+
+![image](https://user-images.githubusercontent.com/117701031/220246264-86b3f27c-a9df-4840-8db4-5714b586fbc1.png)
+
+However, there are definitely times when you wish to search for a pattern in all the files in a directory and all its subdirectories. To make this happen, one can use the `-r` option
+
+```
+grep -r 'pattern' directory/
+```
+
+For example, here I searched for the word **"Sabbath"** in all the files in `written_2/` recursively
+
+![image](https://user-images.githubusercontent.com/117701031/220246819-e0fd8270-8a0e-4268-ad3c-24373b212e5a.png)
