@@ -49,6 +49,17 @@ However, there are definitely times when you wish to search for a pattern in all
 grep -r 'pattern' directory/
 ```
 
-For example, here I searched for the word **"Sabbath"** in all the files in `written_2/` recursively
+For example, here I searched for the word **"Dizengoff Street."** in all the files in `written_2/` recursively, and it successfully returns **all** the lines from **all** the files in `written_2/` that contain that word.
+```
+$ grep -r 'Dizengoff Street.' ./
+./travel_guides/berlitz1/HandRIsrael.txt:        Kassit ❁❁ 117 Dizengoff Street, Tel Aviv; Tel. (03) 522
+./travel_guides/berlitz1/HandRIsrael.txt:        Dizengoff Street. Friendly staff. Hearty Sabbath meals.
+./travel_guides/berlitz1/WhatToIsrael.txt:        Crowds congregate along the promenade and along Dizengoff Street, but
+./travel_guides/berlitz1/WhatToIsrael.txt:        here or at the Cameri Theatre, Dizengoff Street (tel. 03-523 3335/527
+./travel_guides/berlitz1/WhereToIsrael.txt:        busiest thoroughfare, Dizengoff Street. A good place to stroll and
+```
 
-![image](https://user-images.githubusercontent.com/117701031/220246819-e0fd8270-8a0e-4268-ad3c-24373b212e5a.png)
+
+## Option: grep -l
+
+## Option: grep -i
