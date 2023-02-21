@@ -27,7 +27,7 @@ There can be multiple command-line arguments for **`option`** and **`file`**, as
 ![image](https://user-images.githubusercontent.com/117701031/220244234-157e1ad9-7e0d-42b0-b8fe-6147db0a9bb5.png)
 
 _Note:
-The requirements for this lab report requires that "along with each option/mode [I] show, cite [my] source for how [I] found out about it as a URL or a description of where [I] found it." However, since I found all of these options and their functions using the `grep --help` command, I will not repeat this information for each of the examples._
+The requirements for this lab report requires that "along with each option/mode [I] show, cite [my] source for how [I] found out about it as a URL or a description of where [I] found it." Thus, even though I found all of these options and their functions using the `grep --help` command, I will repeat this information for each of the examples._
 
 
 ## Setting it up
@@ -38,7 +38,7 @@ Let's first set up the environment. For this demonstration, I will be using the 
 Our operations will mainly be done on this `written_2/` directory.
 
 ## Option: `grep -r`
-An option we will look into is `-r`, `--recursive`. 
+An option we will look into is `-r`, `--recursive`. This option was chosen from the guide returned by the aforementioned `grep --help` command, under the **"Output control"** section.
 
 As you can tell, the syntax of grep actually takes in individual files as the targets to search. If one uses a directory in place of a file name, the following error is returned:
 
@@ -130,8 +130,64 @@ $ grep -rl 'stupid' ./
 ```
 which shows us 3 files instead of 1 that contains the word **"stupid"**.
 
-In some real scenarios, we care more about the content of the word that we're searching for instead of the format and specificities. In that case, we can use: 
+In some real scenarios, we care more about the content of the word that we're searching for instead of the format and specificities. In that case, we can use the following option: 
 
 ## Option: `grep -i`
 
-'-i', '
+The option `-i`, `--ignore-case` tells `grep` to ignore the uppercase and lowercase distinction. 
+
+
+For our first example, we will look at the search results without option `-i` for the words **"Crazy"** and **"crazy"**, respectively. Then, we will compare those results with the results from searching for **"cRaZy"** using option `-i`.
+
+Search result for **"Crazy"**:
+```
+$ grep -l -r  'Crazy' ./
+./non-fiction/OUP/Castro/chL.txt
+./non-fiction/OUP/Castro/chV.txt
+./travel_guides/berlitz1/WhatToLasVegas.txt
+./travel_guides/berlitz2/Berlin-History.txt
+./travel_guides/berlitz2/Canada-WhereToGo.txt
+./travel_guides/berlitz2/Paris-WhatToDo.txt
+```
+
+Search result for **"crazy"**:
+```
+$ grep -l -r  'crazy' ./
+./non-fiction/OUP/Abernathy/ch1.txt
+./non-fiction/OUP/Castro/chB.txt
+./non-fiction/OUP/Castro/chP.txt
+./non-fiction/OUP/Castro/chV.txt
+./non-fiction/OUP/Fletcher/ch9.txt
+./travel_guides/berlitz1/WhereToIndia.txt
+./travel_guides/berlitz1/WhereToItaly.txt
+./travel_guides/berlitz1/WhereToLosAngeles.txt
+./travel_guides/berlitz2/Algarve-WhatToDo.txt
+./travel_guides/berlitz2/Amsterdam-WhatToDo.txt
+./travel_guides/berlitz2/Boston-WhereToGo.txt
+./travel_guides/berlitz2/California-WhatToDo.txt
+./travel_guides/berlitz2/California-WhereToGo.txt
+./travel_guides/berlitz2/Canada-WhereToGo.txt
+```
+
+Search results for **"cRaZy"**, with option `-i`:
+```
+$ grep -l -r -i 'cRaZy' ./
+./non-fiction/OUP/Abernathy/ch1.txt
+./non-fiction/OUP/Castro/chB.txt
+./non-fiction/OUP/Castro/chL.txt
+./non-fiction/OUP/Castro/chP.txt
+./non-fiction/OUP/Castro/chV.txt
+./non-fiction/OUP/Fletcher/ch9.txt
+./travel_guides/berlitz1/WhatToLasVegas.txt
+./travel_guides/berlitz1/WhereToIndia.txt
+./travel_guides/berlitz1/WhereToItaly.txt
+./travel_guides/berlitz1/WhereToLosAngeles.txt
+./travel_guides/berlitz2/Algarve-WhatToDo.txt
+./travel_guides/berlitz2/Amsterdam-WhatToDo.txt
+./travel_guides/berlitz2/Berlin-History.txt
+./travel_guides/berlitz2/Boston-WhereToGo.txt
+./travel_guides/berlitz2/California-WhatToDo.txt
+./travel_guides/berlitz2/California-WhereToGo.txt
+./travel_guides/berlitz2/Canada-WhereToGo.txt
+./travel_guides/berlitz2/Paris-WhatToDo.txt
+```
