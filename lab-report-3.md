@@ -26,8 +26,8 @@ There can be multiple command-line arguments for **`option`** and **`file`**, as
 
 ![image](https://user-images.githubusercontent.com/117701031/220244234-157e1ad9-7e0d-42b0-b8fe-6147db0a9bb5.png)
 
-_Note:
-The requirements for this lab report requires that "along with each option/mode [I] show, cite [my] source for how [I] found out about it as a URL or a description of where [I] found it." Thus, even though I found all of these options and their functions using the `grep --help` command, I will repeat this information for each of the examples._
+**Note:**
+The requirements for this lab report requires that **"along with each option/mode [I] show, cite [my] source for how [I] found out about it as a URL or a description of where [I] found it."** Thus, even though I found all of these options and their functions using the `grep --help` command, I will repeat this information for each of the examples.
 
 
 ## Setting it up
