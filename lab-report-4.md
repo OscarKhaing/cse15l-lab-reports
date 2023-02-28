@@ -18,7 +18,7 @@ The first 3 highlighted steps are skipped, so we actually start from step 4. Jus
 
 Meanwhile, we will start with the terminal already open and ready to receive input. At the beginning, I will be using the _bash_ terminal, though it doesn't really matter once we log into the **ieng6** secure-shell.
 
-The keys pressed will be listed as they are pressed exactly, and special characters like `<shift>` will be highlighted using the code format and angle brackets, as shown. Commands that are done on different lines will be separated by commas. 
+> The keys pressed will be listed as they are pressed exactly, and special characters like `<shift>` will be highlighted using the code format and angle brackets, as shown. Commands that are done on different lines will be separated by commas. 
 
 # Step 4: Log into ieng6
 
@@ -62,5 +62,5 @@ cd `<space>` lab7 `<enter>`, ls `<enter>`, `<alt-tab> <mouse-button-1-click> <ct
 
 In this sequence, I first changed directory into the **`lab7`** diretory to access the cloned files, listed the contents of **`lab7`** to look at the name of the files, then switched to the browser that has the **week 3** lab page open so that I can copy the `compile` command. The `<mouse-button-1-click>` was to select the command I wanted to copy.
 
-You may wonder why the code line number went from 166 to 168. The reason for this anomaly is that I copied over the wrong compile command (for windows) on Line 167, which didn't work because we are in a linux shell.
+> You may wonder why the code line number went from 166 to 168. The reason for this anomaly is that I copied over the wrong compile command (for windows) on Line 167, which didn't work because we are in a linux shell.
 
