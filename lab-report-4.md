@@ -70,10 +70,12 @@ java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnit
 
 After copying and pasting the second line, I used `<ctrl-backspace>` to delete the file name from week 3 and replace it with the name of the file we are running.
   
-> You may wonder why the code line number went from 166 to 168. The reason for this anomaly is that I copied over the wrong compile command (for windows) on Line 167, which didn't work because we are in a linux shell.
+> You may wonder why the code line number went from 166 to 172. The reason for this anomaly is that I copied over the wrong compile command (for windows) on Line 167, which didn't work because we are in a linux shell, and made some other mistakes. Similar anomalies will not be mentioned hereinafter.
 
 
 # Step 7: Edit the code file to fix the failing test
+
+From the test result messages, we can see that the test failure occurred on line 42 in `ListExamples.java`. Let's fix that.
 
 _Keys pressed:_
 vim `<space>` ListExamples.java `<enter>`
