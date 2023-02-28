@@ -18,6 +18,8 @@ The first 3 highlighted steps are skipped, so we actually start from step 4. Jus
 
 Meanwhile, we will start with the terminal already open and ready to receive input. At the beginning, I will be using the _bash_ terminal, though it doesn't really matter once we log into the **ieng6** secure-shell.
 
+The keys pressed will be listed as they are pressed exactly, and special characters like `<shift>` will be highlighted using the code format and angle brackets, as shown. Commands that are done on different lines will be separated by commas. 
+
 # Step 4: Log into ieng6
 
 _Keys pressed:_ 
@@ -35,8 +37,7 @@ The only notable special-character I pressed was `<shift>`, which was to type th
 # Step 5: Clone your fork of the repository from your Github account
 
 _Keys pressed:_
-git `<space>` clone `<space> <alt-tab> <ctrl-L> <ctrl-c> <alt-tab> <ctrl-v> <enter>`
-ls `<enter>`
+git `<space>` clone `<space> <alt-tab> <ctrl-L> <ctrl-c> <alt-tab> <ctrl-v> <enter>`, ls `<enter>`
 
 Note: "L" is capital to avoid confusion because its lower-case looks like "I" 
 
@@ -45,4 +46,21 @@ Note: "L" is capital to avoid confusion because its lower-case looks like "I"
 In this sequence, I cloned my forked repository from Github using the link URL of my forked repository, and I have my forked repository opened in Chrome on my local machine. 
 
 After the word "clone ", I `<alt-tab>` to switch to my browser, `<ctrl-L>` to select the URL, `<ctrl-c>` to copy, `<alt-tab>` to switch back into VS Code, and `<ctrl-v>` to paste the URL. Then, I clicked `<enter>` to start the cloning. Then, I listed the contents of the current working directory using `ls` to see confirm that the cloned repository is there.
+
+
+
+
+
+
+# Step 6: Run the tests, demonstrating that they fail
+_Keys pressed:_
+cd `<space>` lab7 `<enter>`, ls `<enter>`, `<alt-tab> <mouse-button-1-click> <ctrl-c> <alt-tab> <ctrl-v> <enter>`, `<alt-tab> <mouse-button-1-click> <ctrl-c> <alt-tab> <ctrl-v> <enter>`
+
+![image](https://user-images.githubusercontent.com/117701031/221759781-c1d7ac85-3940-4040-bc3b-1736aa7ccdaa.png)
+
+![image](https://user-images.githubusercontent.com/117701031/221759612-301a7056-7ffe-4432-b62b-c1db7078715c.png)
+
+In this sequence, I first changed directory into the **`lab7`** diretory to access the cloned files, listed the contents of **`lab7`** to look at the name of the files, then switched to the browser that has the **week 3** lab page open so that I can copy the `compile` command. The `<mouse-button-1-click>` was to select the command I wanted to copy.
+
+You may wonder why the code line number went from 166 to 168. The reason for this anomaly is that I copied over the wrong compile command (for windows) on Line 167, which didn't work because we are in a linux shell.
 
