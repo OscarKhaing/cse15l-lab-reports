@@ -62,5 +62,17 @@ cd `<space>` lab7 `<enter>`, ls `<enter>`, `<alt-tab> <mouse-button-1-click> <ct
 
 In this sequence, I first changed directory into the **`lab7`** diretory to access the cloned files, listed the contents of **`lab7`** to look at the name of the files, then switched to the browser that has the **week 3** lab page open so that I can copy the `compile` command. The `<mouse-button-1-click>` was to select the command I wanted to copy.
 
+```
+javac -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar *.java
+java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore ArrayTests
+```
+
 > You may wonder why the code line number went from 166 to 168. The reason for this anomaly is that I copied over the wrong compile command (for windows) on Line 167, which didn't work because we are in a linux shell.
+
+
+# Step 7: Edit the code file to fix the failing test
+_Keys pressed:_
+
+
+
 
