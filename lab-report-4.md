@@ -73,8 +73,11 @@ After copying and pasting the second line, I used `<ctrl-backspace>` to delete t
 
 
 # Step 7: Edit the code file to fix the failing test
-_Keys pressed:_
 
+_Keys pressed:_
+vim `<space>` ListExamples.java `<enter>`
+
+  
 
 
 
