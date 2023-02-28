@@ -22,6 +22,9 @@ Meanwhile, we will start with the terminal already open and ready to receive inp
 
 _Keys pressed:_ 
 ssh `<space>` cs15lwi23aki `<shift>`2 ieng6.ucsd.edu `<enter>`
+
 [Here, I typed my password] `<enter>`
 
 ![image](https://user-images.githubusercontent.com/117701031/221756185-4fdfcfab-1d8b-4ec6-b575-891c4beb9230.png)
+![image](https://user-images.githubusercontent.com/117701031/221756670-8e0ede99-2a23-4ebb-a1fb-4e19517e84d2.png)
+
