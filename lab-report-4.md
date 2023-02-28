@@ -85,11 +85,18 @@ vim `<space>` ListExamples.java `<enter>`,
 `<down> <right> <right> <right> <right> <right> <right> <right> <right> <right> <right> <right> <right>` i `<backspace>` 2 `<esc> <ctrl-;>` x `<enter>`
   
 ![image](https://user-images.githubusercontent.com/117701031/221763720-27ef3b4e-5d82-4db9-969b-7abe0b05c86d.png)
+  
+Screenshot of code after correction:
+  
+![image](https://user-images.githubusercontent.com/117701031/221764719-ba95b404-8e71-4be8-bf08-174fc428bb84.png)
+
 
 In this sequence, I firsted opened the file in a text editing window using `vim`. Then, I pressed `<down>` 41 times to get to _line 42_ and see what was wrong with the code. 
   
 After looking at it for a bit, I realized that the exit condition for the third while loop was not updated with each iteration due to the use of the wrong variable name, I pressed `<down>` to get to _line 43_, then pressed `<right>` 12 times to get to where the problem is, pressed **"i"** to enter editing mode, and changed the "1" of **"index1"** to "2", pressed `<esc>` to enter command mode, and saved and exited `vim` using `:x`.
   
 
-
+# Step 8: Run the tests, demonstrating that they now succeed
+  
+_Keys pressed:_
 
