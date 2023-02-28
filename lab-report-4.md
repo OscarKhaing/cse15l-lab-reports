@@ -54,11 +54,12 @@ After the word "clone ", I `<alt-tab>` to switch to my browser, `<ctrl-L>` to se
 
 # Step 6: Run the tests, demonstrating that they fail
 _Keys pressed:_
-cd `<space>` lab7 `<enter>`, ls `<enter>`, `<alt-tab> <mouse-button-1-click> <ctrl-c> <alt-tab> <ctrl-v> <enter>`, `<alt-tab> <mouse-button-1-click> <ctrl-c> <alt-tab> <ctrl-v> <ctrl-backspace>` ListExamplesTests.java <enter>`
+cd `<space>` lab7 `<enter>`, ls `<enter>`, `<alt-tab> <mouse-button-1-click> <ctrl-c> <alt-tab> <ctrl-v> <enter>`, `<alt-tab> <mouse-button-1-click> <ctrl-c> <alt-tab> <ctrl-v> <ctrl-backspace>` ListExamplesTests <enter>`
 
 ![image](https://user-images.githubusercontent.com/117701031/221759781-c1d7ac85-3940-4040-bc3b-1736aa7ccdaa.png)
 
-![image](https://user-images.githubusercontent.com/117701031/221759612-301a7056-7ffe-4432-b62b-c1db7078715c.png)
+![image](https://user-images.githubusercontent.com/117701031/221761715-67a94013-c0d2-4eb1-911e-2a23818f9b59.png)
+
 
 In this sequence, I first changed directory into the **`lab7`** diretory to access the cloned files, listed the contents of **`lab7`** to look at the name of the files, then switched to the browser that has the **week 3** lab page open so that I can copy the `compile` command. The `<mouse-button-1-click>` was to select the command I wanted to copy.
 
