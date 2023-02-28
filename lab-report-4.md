@@ -54,7 +54,7 @@ After the word "clone ", I `<alt-tab>` to switch to my browser, `<ctrl-L>` to se
 
 # Step 6: Run the tests, demonstrating that they fail
 _Keys pressed:_
-cd `<space>` lab7 `<enter>`, ls `<enter>`, `<alt-tab> <mouse-button-1-click> <ctrl-c> <alt-tab> <ctrl-v> <enter>`, `<alt-tab> <mouse-button-1-click> <ctrl-c> <alt-tab> <ctrl-v> <enter>`
+cd `<space>` lab7 `<enter>`, ls `<enter>`, `<alt-tab> <mouse-button-1-click> <ctrl-c> <alt-tab> <ctrl-v> <enter>`, `<alt-tab> <mouse-button-1-click> <ctrl-c> <alt-tab> <ctrl-v> <ctrl-backspace>` ListExamplesTests.java <enter>`
 
 ![image](https://user-images.githubusercontent.com/117701031/221759781-c1d7ac85-3940-4040-bc3b-1736aa7ccdaa.png)
 
@@ -67,6 +67,8 @@ javac -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar *.java
 java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore ArrayTests
 ```
 
+After copying and pasting the second line, I used `<ctrl-backspace>` to delete the file name from week 3 and replace it with the name of the file we are running.
+  
 > You may wonder why the code line number went from 166 to 168. The reason for this anomaly is that I copied over the wrong compile command (for windows) on Line 167, which didn't work because we are in a linux shell.
 
 
