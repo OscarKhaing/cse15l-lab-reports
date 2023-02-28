@@ -98,5 +98,12 @@ After looking at it for a bit, I realized that the exit condition for the third 
 
 # Step 8: Run the tests, demonstrating that they now succeed
   
-_Keys pressed:_
+_Keys pressed:_ 
+`<up> <up> <up> <enter>`, `<up> <up> <up> <enter>`
+  
+![image](https://user-images.githubusercontent.com/117701031/221765147-8f1fbb32-cd6e-4a2e-884a-f8e70c819f32.png)
+
+In this sequence, I first compiled the files again using the compile command from earlier, which is 3 commands above in the history, so I pressed `<up>` 3 times and hit `<enter>`. Then, I ran the test file again using similar keys. Now, the test says that the file is all okay.
+
+![image](https://user-images.githubusercontent.com/117701031/221765566-7dd99579-f7ac-4982-b19d-067d2b248ec3.png)
 
