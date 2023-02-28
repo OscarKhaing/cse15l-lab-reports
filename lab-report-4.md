@@ -105,5 +105,26 @@ _Keys pressed:_
 
 In this sequence, I first compiled the files again using the compile command from earlier, which is 3 commands above in the history, so I pressed `<up>` 3 times and hit `<enter>`. Then, I ran the test file again using similar keys. Now, the test says that the file is all okay.
 
-![image](https://user-images.githubusercontent.com/117701031/221765566-7dd99579-f7ac-4982-b19d-067d2b248ec3.png)
+![image](https://user-images.githubusercontent.com/117701031/221765693-a832b346-7e78-4661-8b66-eaed09969015.png)
 
+  
+# Step 9: Commit and push the resulting change to your Github account
+
+Yay, we made it! Time to push the results!
+  
+_Keys pressed:_ 
+git `<space>` add . `<enter>`, git `<space>` commit `<space>` -m `<space> <shift-'>` nice `<shift-'> <enter>`, git `<space>` push `<enter>`,
+[Here, I entered my credentials for authorize the remote push] `<enter>`
+  
+![image](https://user-images.githubusercontent.com/117701031/221767489-b0522e9b-ebb4-4a10-8349-35224b5cb912.png)
+![image](https://user-images.githubusercontent.com/117701031/221767555-147b4a44-66ad-49fe-a128-dbaa39ebb2fa.png)
+
+In this sequence, I think it is worth noting that I went through some trouble using the personal access tokens from Github. For the first token I generated, I did not allow any access permissions when generating it, so the authorization was denied when I entered this token. I had to generate a new one with new permissions to edit content of repositories, which then worked.
+  
+  
+  
+# All done! 
+  
+Thank you very much for tuning in today. Hope you had fun!
+  
+  
