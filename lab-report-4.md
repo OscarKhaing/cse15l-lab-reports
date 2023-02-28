@@ -18,13 +18,31 @@ The first 3 highlighted steps are skipped, so we actually start from step 4. Jus
 
 Meanwhile, we will start with the terminal already open and ready to receive input. At the beginning, I will be using the _bash_ terminal, though it doesn't really matter once we log into the **ieng6** secure-shell.
 
-# Step 4:
+# Step 4: Log into ieng6
 
 _Keys pressed:_ 
-ssh `<space>` cs15lwi23aki `<shift>`2 ieng6.ucsd.edu `<enter>`
+ssh `<space>` cs15lwi23aki `<shift-2>` ieng6.ucsd.edu `<enter>`
 
 [Here, I typed my password] `<enter>`
 
 ![image](https://user-images.githubusercontent.com/117701031/221756185-4fdfcfab-1d8b-4ec6-b575-891c4beb9230.png)
 ![image](https://user-images.githubusercontent.com/117701031/221756670-8e0ede99-2a23-4ebb-a1fb-4e19517e84d2.png)
+
+In this sequence, I logged into my **ieng6** secure-shell. 
+
+The only notable special-character I pressed was `<shift>`, which was to type the `@` symbol. It should be noted that I held the `<shift>` key while I pressed `2`, then released it afterwards.
+
+# Step 5: Clone your fork of the repository from your Github account
+
+_Keys pressed:_
+git `<space>` clone `<space> <alt-tab> <ctrl-L> <ctrl-c> <alt-tab> <ctrl-v> <enter>`
+ls `<enter>`
+
+Note: "L" is capital to avoid confusion because its lower-case looks like "I" 
+
+![image](https://user-images.githubusercontent.com/117701031/221757395-9b582b10-53dc-46f0-b11b-2c04ec7ebe80.png)
+
+In this sequence, I cloned my forked repository from Github using the link URL of my forked repository, and I have my forked repository opened in Chrome on my local machine. 
+
+After the word "clone ", I `<alt-tab>` to switch to my browser, `<ctrl-L>` to select the URL, `<ctrl-c>` to copy, `<alt-tab>` to switch back into VS Code, and `<ctrl-v>` to paste the URL. Then, I clicked `<enter>` to start the cloning. Then, I listed the contents of the current working directory using `ls` to see confirm that the cloned repository is there.
 
