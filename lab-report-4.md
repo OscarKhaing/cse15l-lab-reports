@@ -70,16 +70,25 @@ java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnit
 
 After copying and pasting the second line, I used `<ctrl-backspace>` to delete the file name from week 3 and replace it with the name of the file we are running.
   
-> You may wonder why the code line number went from 166 to 172. The reason for this anomaly is that I copied over the wrong compile command (for windows) on Line 167, which didn't work because we are in a linux shell, and made some other mistakes. Similar anomalies will not be mentioned hereinafter.
+> You may wonder why the code line number went from _166_ to _172_. The reason for this anomaly is that I copied over the wrong compile command (for windows) on Line 167, which didn't work because we are in a linux shell, and made some other mistakes. Similar anomalies will not be mentioned hereinafter.
 
 
 # Step 7: Edit the code file to fix the failing test
 
-From the test result messages, we can see that the test failure occurred on line 42 in `ListExamples.java`. Let's fix that.
+From the test result messages, we can see that the test failure occurred on _line 42_ in `ListExamples.java`. Let's fix that.
 
 _Keys pressed:_
-vim `<space>` ListExamples.java `<enter>`
+vim `<space>` ListExamples.java `<enter>`, 
 
+`<down> <down> <down> <down> <down> <down> <down> <down> <down> <down> <down> <down> <down> <down> <down> <down> <down> <down> <down> <down> <down> <down> <down> <down> <down> <down> <down> <down> <down> <down> <down> <down> <down> <down> <down> <down> <down> <down> <down> <down> <down>`,
+  
+`<down> <right> <right> <right> <right> <right> <right> <right> <right> <right> <right> <right> <right>` i `<backspace>` 2 `<esc> <ctrl-;>` x `<enter>`
+  
+![image](https://user-images.githubusercontent.com/117701031/221763720-27ef3b4e-5d82-4db9-969b-7abe0b05c86d.png)
+
+In this sequence, I firsted opened the file in a text editing window using `vim`. Then, I pressed `<down>` 41 times to get to _line 42_ and see what was wrong with the code. 
+  
+After looking at it for a bit, I realized that the exit condition for the third while loop was not updated with each iteration due to the use of the wrong variable name, I pressed `<down>` to get to _line 43_, then pressed `<right>` 12 times to get to where the problem is, pressed **"i"** to enter editing mode, and changed the "1" of **"index1"** to "2", pressed `<esc>` to enter command mode, and saved and exited `vim` using `:x`.
   
 
 
