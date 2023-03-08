@@ -54,7 +54,7 @@ After the word "clone ", I `<alt-tab>` to switch to my browser, `<ctrl-L>` to se
 
 # Step 6: Run the tests, demonstrating that they fail
 _Keys pressed:_
-cd `<space>` lab7 `<enter>`, ls `<enter>`, `<alt-tab> <mouse-button-1-click> <ctrl-c> <alt-tab> <ctrl-v> <enter>`, `<alt-tab> <mouse-button-1-click> <ctrl-c> <alt-tab> <ctrl-v> <ctrl-backspace>` ListExamplesTests <enter>`
+cd `<space>` lab7 `<enter>`, ls `<enter>`, `<alt-tab> <mouse-button-1-click> <ctrl-c> <alt-tab> <ctrl-v> <enter>`, `<alt-tab> <mouse-button-1-click> <ctrl-c> <alt-tab> <ctrl-v> <ctrl-backspace>` ListExamplesTests `<enter>`
 
 ![image](https://user-images.githubusercontent.com/117701031/221759781-c1d7ac85-3940-4040-bc3b-1736aa7ccdaa.png)
 
@@ -114,7 +114,7 @@ Yay, we made it! Time to push the results!
   
 _Keys pressed:_ 
 git `<space>` add . `<enter>`, git `<space>` commit `<space>` -m `<space> <shift-'>` nice `<shift-'> <enter>`, git `<space>` push `<enter>`,
-[Here, I entered my credentials for authorize the remote push] `<enter>`
+[Here, I entered my credentials to authorize the remote push] `<enter>`
   
 ![image](https://user-images.githubusercontent.com/117701031/221767489-b0522e9b-ebb4-4a10-8349-35224b5cb912.png)
 ![image](https://user-images.githubusercontent.com/117701031/221767555-147b4a44-66ad-49fe-a128-dbaa39ebb2fa.png)
