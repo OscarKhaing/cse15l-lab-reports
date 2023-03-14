@@ -95,7 +95,7 @@ $ find -type f
 ./non-fiction/OUP/Berk/CH4.txt
 ./non-fiction/OUP/Berk/ch7.txt
 ```
-**_Note:_** _(long list, omitted)_
+_(long list, omitted)_
 
 
 As you can see, the directories are no longer in the output of the list of found "things". 
