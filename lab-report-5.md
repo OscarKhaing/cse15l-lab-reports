@@ -185,7 +185,7 @@ It evidently worked. Only relative paths of `.txt` files are returned
 This can be used to further filter the files you want to single out; for example, if you are organizing a folder containing videos and photos, you can single out file paths of `.jpg` and `.mp4` files separately.
 
 # Option 3: -iname
-The third option we will look at will be the `ignore-case` version of the previous command `-name`, which tells find to turn off case-sensitivity and output all files with the specified name regardless of the characters being uppercase or lowercase. This command is selected through the github repo [https://math2001.github.io/article/bashs-find-command/](https://math2001.github.io/article/bashs-find-command/).
+The third option we will look at will be the `ignore-case` version of the previous command option `-name`, which tells find to turn off case-sensitivity and output all files with the specified name regardless of the characters being uppercase or lowercase. This command is selected through the github repo [https://math2001.github.io/article/bashs-find-command/](https://math2001.github.io/article/bashs-find-command/).
 
 
 ## Example 1:
