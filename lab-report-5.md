@@ -37,9 +37,9 @@ Let's first set up the environment. For this demonstration, I will be using the 
 
 Our operations will mainly be done on this `written_2/` directory.
 
-# Option 1: -type
+# Option 1: find -type
 
-An option we will look at is. This is selected through the github repo [https://math2001.github.io/article/bashs-find-command/](https://math2001.github.io/article/bashs-find-command/)
+An option we will look at is '-type'. This is selected through the github repo [https://math2001.github.io/article/bashs-find-command/](https://math2001.github.io/article/bashs-find-command/)
 
 
 
