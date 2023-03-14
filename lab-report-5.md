@@ -5,7 +5,7 @@
 
 Linux has been a popular choice of operating system due to its inherent stability. When operating in a linux shell, users must manipulate files through a terminal using a variety of commands. 
 
-One of those commands is `find`, which is used for "finding" files. It will return the path of the file that we are finding.
+One of those commands is `find`, which is used for "finding" files. It will return the relative path of the file that we are finding.
 
 > This guide is very similar to _lab-report-3_ in format and will focus on **4** of the command line options for the command `find`. 
 > The reason why I chose find is because I felt a bit illiterate in using `find`, and learning it will help me in the final performance task.
@@ -151,9 +151,33 @@ $ find -name "berlitz2"
 
 `find` thus returns the relative path of the directory called **"berlitz2"**, which is exactly what we wanted.
 
+## Example 2:
 
+For the second example, let's take a look at the output of `find -name "*.txt"`; this tells find to return all files with **".txt"** in their name, which is specified through the character **"*"**.
 
+```
+$ find -name "*.txt"
+./non-fiction/OUP/Abernathy/ch1.txt
+./non-fiction/OUP/Abernathy/ch14.txt
+./non-fiction/OUP/Abernathy/ch15.txt
+./non-fiction/OUP/Abernathy/ch2.txt
+./non-fiction/OUP/Abernathy/ch3.txt
+./non-fiction/OUP/Abernathy/ch6.txt
+./non-fiction/OUP/Abernathy/ch7.txt
+./non-fiction/OUP/Abernathy/ch8.txt
+./non-fiction/OUP/Abernathy/ch9.txt
+./non-fiction/OUP/Berk/ch1.txt
+./non-fiction/OUP/Berk/ch2.txt
+./non-fiction/OUP/Berk/CH4.txt
+./non-fiction/OUP/Berk/ch7.txt
+```
+_(long list, omitted)_
 
+It evidently worked. Only relative paths of `.txt` files are returned
+
+> Note that this is the same output as `find -type f` because only .txt files exist in this data bank; if there were files with other extensions like `.jpg`, it would not be included with the output.
+
+This can be used to further filter the files you want to single out; for example, if you are organizing a folder containing videos and photos, you can single out file paths of `.jpg` and `.mp4` files separately.
 
 
 
