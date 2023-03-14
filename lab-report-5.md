@@ -180,8 +180,36 @@ It evidently worked. Only relative paths of `.txt` files are returned
 This can be used to further filter the files you want to single out; for example, if you are organizing a folder containing videos and photos, you can single out file paths of `.jpg` and `.mp4` files separately.
 
 
+# Option 3: -maxdepth
+
+The third option we will look at is `-maxdepth`. This is selected through the github repo [https://math2001.github.io/article/bashs-find-command/](https://math2001.github.io/article/bashs-find-command/).
+
+As its name suggests, `-maxdepth` basically tells the find the only recursively find "things" in subdirectories that are in only specified levels under the current working directory.
 
 
+For your reference, below is the directory structure of the current working directory `written_2/`:
 
+```
+.
+├── non-fiction
+│   └── OUP
+│      ├── Abernathy
+│      ├── Berk
+│      ├── Castro
+│      ├── Fletcher
+│      ├── Kauffman
+│      └── Rybczynski
+└── travel_guides
+    ├── berlitz1
+    └── berlitz2
+```
+![image](https://user-images.githubusercontent.com/117701031/224883307-a0b581ec-1730-4344-aae2-ad78094501e0.png)
+
+
+The syntax for this command looks like this:
+
+```
+find -maxdepth [depth input]
+```
 
 
