@@ -140,6 +140,16 @@ find -name [name input]
 
 ## Example 1:
 
+For the first example, we will see the output for `find -name "berlitz2"`, which specifies the name of folder **"berlitz2"**.
+
+> The name input following "`-name`" must be enclosed in quotation marks `" "`. 
+
+```
+$ find -name "berlitz2"
+./travel_guides/berlitz2
+```
+
+`find` thus returns the relative path of the directory called **"berlitz2"**, which is exactly what we wanted.
 
 
 
