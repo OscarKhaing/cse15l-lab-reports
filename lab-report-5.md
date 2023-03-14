@@ -1,5 +1,13 @@
 ## Hi all! On this page, you will find a guide for 4 different command-line options for the `find` command in _bash_, each with 2 detailed examples for clarity.
 
+But before we get into it, let's first discuss why I chose this topic for my final lab.
+
+My favorite activity in CSE15L was either the first or the third lab report; in the third lab report, I learned a great deal about a great command called `grep` and had fun doing so, while in the first lab report I was able to make the post a bit more fun and personalized than the rest of the reports. I was actually very torn between the two choices until I realized that the first lab report wasn't part of the list. In fear of misunderstanding the assignment instructions, I took the equally appealing alternative of doing another lab report 3, but for a different command.
+
+I do want to acknowledge that it may seem to be a lack of effort for choosing both `-name` and `-iname` for this lab report. However,
+
+
+
 ---
 ## What is "find"?
 
@@ -8,7 +16,7 @@ Linux has been a popular choice of operating system due to its inherent stabilit
 One of those commands is `find`, which is used for "finding" files. It will return the relative path of the file that we are finding.
 
 > This guide is very similar to _lab-report-3_ in format and will focus on **4** of the command line options for the command `find`. 
-> The reason why I chose find is because I felt a bit illiterate in using `find`, and learning it will help me in the final performance task.
+> The reason why I chose `find` is because I felt a bit illiterate in using `find`, and learning it will help me in the final performance task.
 
 To use it, we use the following syntax format:
 
@@ -146,7 +154,7 @@ find -name [name input]
 
 For the first example, we will see the output for `find -name "berlitz2"`, which specifies the name of folder **"berlitz2"**.
 
-> The name input following "`-name`" must be enclosed in quotation marks `" "`. 
+> The name input following "`-name`" must be enclosed in quotation marks if there is a `<space>` character `" "`. 
 
 ```
 $ find -name "berlitz2"
@@ -157,7 +165,7 @@ $ find -name "berlitz2"
 
 ## Example 2:
 
-For the second example, let's take a look at the output of `find -name "*.txt"`; this tells find to return all files with **".txt"** in their name, which is specified through the character **"*"**.
+For the second example, let's take a look at the output of `find -name "*.txt"`; this tells `find` to return all files with **".txt"** in their name, which is specified through the character **"*"**.
 
 ```
 $ find -name "*.txt"
@@ -185,7 +193,7 @@ It evidently worked. Only relative paths of `.txt` files are returned
 This can be used to further filter the files you want to single out; for example, if you are organizing a folder containing videos and photos, you can single out file paths of `.jpg` and `.mp4` files separately.
 
 # Option 3: -iname
-The third option we will look at will be the `ignore-case` version of the previous command option `-name`, which tells find to turn off case-sensitivity and output all files with the specified name regardless of the characters being uppercase or lowercase. This command is selected through the github repo [https://math2001.github.io/article/bashs-find-command/](https://math2001.github.io/article/bashs-find-command/).
+The third option we will look at will be the `ignore-case` version of the previous command option `-name`, which tells `find` to turn off case-sensitivity and output all files with the specified name regardless of the characters being uppercase or lowercase. This command is selected through the github repo [https://math2001.github.io/article/bashs-find-command/](https://math2001.github.io/article/bashs-find-command/).
 
 
 ## Example 1:
@@ -217,10 +225,11 @@ Expectedly, this case-sensitive approach is rigid and can pose some problems for
 
 # Option 4: -maxdepth
 
-The last option we will look at is `-maxdepth`. This command is selected through the github repo [https://math2001.github.io/article/bashs-find-command/](https://math2001.github.io/article/bashs-find-command/).
+The fourth option we will look at is `-maxdepth`. This command is selected through the github repo [https://math2001.github.io/article/bashs-find-command/](https://math2001.github.io/article/bashs-find-command/).
 
-As its name suggests, `-maxdepth` basically tells the find the only recursively find "things" in subdirectories that are in only specified levels under the current working directory.
+As its name suggests, `-maxdepth` basically tells the command to return found "things" in subdirectories that are in only specified levels or less levels under the current working directory.
 
+A `depth` of 0 would mean only looking into the current working directory, and a `depth` of 1 would mean looking into **BOTH** the current working directory **AND** all subdirectories in the current directory.
 
 For your reference, below is the directory structure of the current working directory `written_2/`:
 
@@ -248,7 +257,7 @@ find -maxdepth [depth input]
 ```
 
 ## Example 1:
-The first example we will look at is `find -maxdepth 2`; this tells `find` to only look at directories two levels below the current working directory. A `depth` of 0 would mean only looking into the current working directory, and a `depth` of 1 would mean looking into **BOTH** the current working directory **AND** all subdirectories in the current directory.
+The first example we will look at is `find -maxdepth 2`; this tells `find` to only look at directories two levels below the current working directory.
 
 ```
 $ find -maxdepth 2
@@ -293,6 +302,75 @@ $ find -maxdepth 3
 
 
 Since there are no files 3 levels below the current working directory, the command only returns directories under **`OUP`** and not files. However, all the files in `travel_guides` are 3 levels below, so all the files were in the output.
+
+
+
+# Option 5: -and, -or operators
+The last option we will look at is operators for combining different expressions. This command is selected through the github repo [https://math2001.github.io/article/bashs-find-command/](https://math2001.github.io/article/bashs-find-command/).
+
+The syntax looks like this:
+```
+find -expression1 [exp1 input] -or -expression2 [exp2 input]
+
+find -expression1 [exp1 input] -and -expression2 [exp2 input]
+```
+
+## Example 1:
+For the first example, when you want to use both `-name` and `-type`, you will have to use the `-and` operator. However, typing it out is optional, and command line input with more than 1 argument is combined with `-and` by default.
+
+```
+$ find -name CanaryIslands-WhereToGo.txt -and -type f
+./travel_guides/berlitz2/CanaryIslands-WhereToGo.txt
+
+$ find -name CanaryIslands-WhereToGo.txt -type f
+./travel_guides/berlitz2/CanaryIslands-WhereToGo.txt
+```
+
+As you can see, the two output show the same results with or without `-and`. 
+
+## Example 2:
+
+For the second example, when you want to search for files of, say, more than one name, you can use `-or`. It essentially tells the  find  command to return all files with either of the names.
+
+```
+$ find -name CanaryIslands-WhereToGo.txt -or -name Athens-History.txt
+./travel_guides/berlitz2/Athens-History.txt
+./travel_guides/berlitz2/CanaryIslands-WhereToGo.txt
+```
+
+This essentially eliminates the need to write `find` on different lines, which can be helpful since the line can be extended a lot more than 2 expressions.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ## That concludes my guide to 4 of the useful command-line options for find. Hope you had fun and learned something new on this page!
