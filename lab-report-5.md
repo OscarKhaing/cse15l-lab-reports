@@ -22,3 +22,38 @@ find [OPTION] [PATH...] [EXPRESSION]
 * **`[PATH]`** is the directory that you want `find` to search in, recursively. 
 * **[EXPRESSION]** must be the name(s) of the file(s) in which you want to search for the pattern 
 
+> General tip for _bash_:
+> When using a command you are not familiar with, you can use
+> `[whatever-command-you-use] --help`
+> to ask _bash_ to print a guide for the command, as seen below.
+
+![image](https://user-images.githubusercontent.com/117701031/224870689-b1766aa0-227f-42cb-bba2-423e8a25a3e4.png)
+
+## Setting it up
+
+Let's first set up the environment. For this demonstration, I will be using the data set from the **CSE15L Skill Demo 1** that I cloned and stored on my local machine, and I will be operating using _Bash_ terminal, as seen below. 
+
+![image](https://user-images.githubusercontent.com/117701031/220243639-21a262e5-d2b9-48b9-8dfb-5d97602e16c6.png)
+
+Our operations will mainly be done on this `written_2/` directory.
+
+# Option 1: -type
+
+An option we will look at is. This is selected through the github repo [https://math2001.github.io/article/bashs-find-command/](https://math2001.github.io/article/bashs-find-command/)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
