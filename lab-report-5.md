@@ -40,7 +40,7 @@ Our operations will mainly be done on this `written_2/` directory.
 
 # Option 1: -type 
 
-An option we will look at is '-type'. This is selected through the github repo [https://math2001.github.io/article/bashs-find-command/](https://math2001.github.io/article/bashs-find-command/).
+An option we will look at is '-type'. This command is selected through the github repo [https://math2001.github.io/article/bashs-find-command/](https://math2001.github.io/article/bashs-find-command/).
 
 By default, `find`, without any options or other arguments, returns both files and directories recursively in the current working directory.
 
@@ -130,7 +130,7 @@ This is extremely helpful to have, since we can redirect the output all the file
 
 # Option 2: -name 
 
-Another option we will look at today is `-name`. This is selected through the github repo [https://math2001.github.io/article/bashs-find-command/](https://math2001.github.io/article/bashs-find-command/).
+Another option we will look at today is `-name`. This command is selected through the github repo [https://math2001.github.io/article/bashs-find-command/](https://math2001.github.io/article/bashs-find-command/).
 
 This will help us differentiate between different files with their names and further specify the file we want. The syntax is as follows:
 
@@ -179,10 +179,40 @@ It evidently worked. Only relative paths of `.txt` files are returned
 
 This can be used to further filter the files you want to single out; for example, if you are organizing a folder containing videos and photos, you can single out file paths of `.jpg` and `.mp4` files separately.
 
+# Option 3: -iname
+The third option we will look at will be the `ignore-case` version of the previous command `-name`, which tells find to turn off case-sensitivity and output all files with the specified name regardless of the characters being uppercase or lowercase. This command is selected through the github repo [https://math2001.github.io/article/bashs-find-command/](https://math2001.github.io/article/bashs-find-command/).
 
-# Option 3: -maxdepth
 
-The third option we will look at is `-maxdepth`. This is selected through the github repo [https://math2001.github.io/article/bashs-find-command/](https://math2001.github.io/article/bashs-find-command/).
+## Example 1:
+First, let's see what happens if we do not use `-iname`.
+
+```
+$ find -name 'oup'
+
+$ find -iname 'oup'
+./non-fiction/OUP
+```
+
+In the first line, the attempt to find the directory called **"OUP"** failed because the name is uppercase, but the commandline argument is spelled in lowercase. In the third line, it does successfully find the directory because it is correct. 
+
+## Example 2:
+Now, let's try to find the **"CanaryIslands-WhereToGo.txt"** file using the command.
+
+```
+$ find -name CanaryIslands-WheretoGo.txt
+
+$ find -iname CanaryIslands-WheretoGo.txt
+./travel_guides/berlitz2/CanaryIslands-WhereToGo.txt
+```
+
+Again, the first line failes because the **"t"** in the name is capitalized, but it's spelled lowercase in the argument. The third line fixes this.
+
+Expectedly, this case-sensitive approach is rigid and can pose some problems for user-friendliness. Many people, me myself for example, like to name files with capital letters, and it is certainly not worth the effort for the users to remember every capitalized letter in a long name of a file if we are trying to find it. This command option perfectly solves that problem.
+
+
+# Option 4: -maxdepth
+
+The last option we will look at is `-maxdepth`. This command is selected through the github repo [https://math2001.github.io/article/bashs-find-command/](https://math2001.github.io/article/bashs-find-command/).
 
 As its name suggests, `-maxdepth` basically tells the find the only recursively find "things" in subdirectories that are in only specified levels under the current working directory.
 
@@ -206,10 +236,76 @@ For your reference, below is the directory structure of the current working dire
 ![image](https://user-images.githubusercontent.com/117701031/224883307-a0b581ec-1730-4344-aae2-ad78094501e0.png)
 
 
-The syntax for this command looks like this:
+The syntax for the `maxdepth` option looks like this:
 
 ```
 find -maxdepth [depth input]
 ```
+
+## Example 1:
+The first example we will look at is `find -maxdepth 2`; this tells `find` to only look at directories two levels below the current working directory. A `depth` of 0 would mean only looking into the current working directory, and a `depth` of 1 would mean looking into **BOTH** the current working directory **AND** all subdirectories in the current directory.
+
+```
+$ find -maxdepth 2
+.
+./non-fiction
+./non-fiction/OUP
+./travel_guides
+./travel_guides/berlitz1
+./travel_guides/berlitz2
+```
+
+As you can see, the command returned only directories, since there are no files at depth 2.
+
+## Example 2:
+
+However, once we change it to depth 3 with `find -maxdepth 3`, the output starts including the files from travel_guides. 
+
+```
+$ find -maxdepth 3
+.
+./non-fiction
+./non-fiction/OUP
+./non-fiction/OUP/Abernathy
+./non-fiction/OUP/Berk
+./non-fiction/OUP/Castro
+./non-fiction/OUP/Fletcher
+./non-fiction/OUP/Kauffman
+./non-fiction/OUP/Rybczynski
+./travel_guides
+./travel_guides/berlitz1
+./travel_guides/berlitz1/HandRHawaii.txt
+./travel_guides/berlitz1/HandRHongKong.txt
+./travel_guides/berlitz1/HandRIbiza.txt
+./travel_guides/berlitz1/HandRIsrael.txt
+./travel_guides/berlitz1/HandRIstanbul.txt
+./travel_guides/berlitz1/HandRJamaica.txt
+./travel_guides/berlitz1/HandRJerusalem.txt
+./travel_guides/berlitz1/HandRLakeDistrict.txt
+```
+_(long list, omitted)_
+
+Since there are no files 3 levels below the current working directory, the command only returns directories under **`OUP`** and not files. However, all the files in `travel_guides` are 3 levels below, so all the files were in the output.
+
+
+## That concludes my guide to 4 of the useful command-line options for find. Hope you had fun and learned something new on this page!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
