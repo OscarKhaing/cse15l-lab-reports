@@ -19,7 +19,7 @@ find [PATH...] [EXPRESSION]
 > It should be noted that some parts of the syntax format ([-Olevel], [-D debugopts]) have been left out as they are irrelevant to our discussion on **"options"**, or in the case of `find`, **"expressions"**.
 
 * **`[PATH]`** is the directory that you want `find` to search in, recursively. 
-* **[EXPRESSION]** is the "option" modifier that we are going to look at today. 
+* **`[EXPRESSION]`** is the "option" modifier that we are going to look at today. 
 
 **_Note:_** _"option" and "expression" will be used interchangeably hereinafter._
 
