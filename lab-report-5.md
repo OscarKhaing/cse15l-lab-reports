@@ -4,9 +4,9 @@ But before we get into it, let's first discuss why I chose this topic for my fin
 
 My favorite activity in CSE15L was either the first or the third lab report; in the third lab report, I learned a great deal about a great command called `grep` and had fun doing so, while in the first lab report I was able to make the post a bit more fun and personalized than the rest of the reports. I was actually very torn between the two choices until I realized that the first lab report wasn't part of the list. In fear of misunderstanding the assignment instructions, I took the equally appealing alternative of doing another lab report 3, but for a different command.
 
-I do want to acknowledge that it may seem to be a lack of effort for choosing both `-name` and `-iname` for this lab report. However,
+I do want to acknowledge that it may seem to be a lack of effort for choosing both `-name` and `-iname` for this lab report; thus, I have also included a 5th pseudo-option and examples.
 
-
+Hope you enjoy.
 
 ---
 ## What is "find"?
