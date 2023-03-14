@@ -303,6 +303,7 @@ $ find -maxdepth 3
 
 Since there are no files 3 levels below the current working directory, the command only returns directories under **`OUP`** and not files. However, all the files in `travel_guides` are 3 levels below, so all the files were in the output.
 
+This option is very helpful if we are working with large data banks with ridiculously large number of levels, since we can limit the number of operations the computer tries to perform and avoid crashes.
 
 
 # Option 5: -and, -or operators
@@ -338,59 +339,8 @@ $ find -name CanaryIslands-WhereToGo.txt -or -name Athens-History.txt
 ./travel_guides/berlitz2/CanaryIslands-WhereToGo.txt
 ```
 
-This essentially eliminates the need to write `find` on different lines, which can be helpful since the line can be extended a lot more than 2 expressions.
+This essentially eliminates the need to write `find` on different lines, which can be helpful since the line can be extended a lot more than 2 expressions. It would look a lot cleaner and allows for combinations of filter properties.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+---
 
 ## That concludes my guide to 4 of the useful command-line options for find. Hope you had fun and learned something new on this page!
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
