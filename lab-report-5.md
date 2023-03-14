@@ -64,8 +64,10 @@ $ find
 ./non-fiction/OUP/Berk/ch2.txt
 ./non-fiction/OUP/Berk/CH4.txt
 ./non-fiction/OUP/Berk/ch7.txt
+
+...(long list, omitted)
 ```
-_(long list, omitted)_
+
 
 As you can see, it returns all of _non-fiction_, _OUP_, and _Abernathy_, which are directories, and assorted `.txt` files, which are files.
 
@@ -94,8 +96,10 @@ $ find -type f
 ./non-fiction/OUP/Berk/ch2.txt
 ./non-fiction/OUP/Berk/CH4.txt
 ./non-fiction/OUP/Berk/ch7.txt
+
+...(long list, omitted)
 ```
-_(long list, omitted)_
+
 
 
 As you can see, the directories are no longer in the output of the list of found "things". 
@@ -170,8 +174,9 @@ $ find -name "*.txt"
 ./non-fiction/OUP/Berk/ch2.txt
 ./non-fiction/OUP/Berk/CH4.txt
 ./non-fiction/OUP/Berk/ch7.txt
+
+...(long list, omitted)
 ```
-_(long list, omitted)_
 
 It evidently worked. Only relative paths of `.txt` files are returned
 
@@ -282,8 +287,10 @@ $ find -maxdepth 3
 ./travel_guides/berlitz1/HandRJamaica.txt
 ./travel_guides/berlitz1/HandRJerusalem.txt
 ./travel_guides/berlitz1/HandRLakeDistrict.txt
+
+...(long list, omitted)
 ```
-_(long list, omitted)_
+
 
 Since there are no files 3 levels below the current working directory, the command only returns directories under **`OUP`** and not files. However, all the files in `travel_guides` are 3 levels below, so all the files were in the output.
 
