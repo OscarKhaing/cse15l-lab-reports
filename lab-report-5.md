@@ -13,14 +13,15 @@ One of those commands is `find`, which is used for "finding" files. It will retu
 To use it, we use the following syntax format:
 
 ```
-find [OPTION] [PATH...] [EXPRESSION]
+find [PATH...] [EXPRESSION]
 ```
 
-> It should be noted that some parts of the syntax format ([-Olevel], [-D debugopts]) have been left out as they are irrelevant to our discussion on **"options"**.
+> It should be noted that some parts of the syntax format ([-Olevel], [-D debugopts]) have been left out as they are irrelevant to our discussion on **"options"**, or in the case of `find`, **"expressions"**.
 
-* **`[OPTION]`** are modifiers to limit or specify conditions for the operation (which we'll look at today)
 * **`[PATH]`** is the directory that you want `find` to search in, recursively. 
-* **[EXPRESSION]** is the name(s) of the file(s) that you want to look for
+* **[EXPRESSION]** is the "option" modifier that we are going to look at today. 
+
+**_Note:_** _"option" and "expression" will be used interchangeably hereinafter._
 
 > General tip for _bash_:
 > When using a command you are not familiar with, you can use
@@ -37,9 +38,9 @@ Let's first set up the environment. For this demonstration, I will be using the 
 
 Our operations will mainly be done on this `written_2/` directory.
 
-# Option 1: find -type
+# Option 1: -type 
 
-An option we will look at is '-type'. This is selected through the github repo [https://math2001.github.io/article/bashs-find-command/](https://math2001.github.io/article/bashs-find-command/)
+An option we will look at is '-type'. This is selected through the github repo [https://math2001.github.io/article/bashs-find-command/](https://math2001.github.io/article/bashs-find-command/).
 
 By default, `find`, without any options or other arguments, returns both files and directories recursively in the current working directory.
 
@@ -68,7 +69,11 @@ _(long list, omitted)_
 
 As you can see, it returns all of _non-fiction_, _OUP_, and _Abernathy_, which are directories, and assorted `.txt` files, which are files.
 
-But as you know, _bash_ differentiates very distinctly between files and directories, and especially with other commands like 'grep' that we talked about in lab report 3. So we do actually have the `-type` option to conveniently single out either files or directories.
+But as you know, _bash_ differentiates very distinctly between files and directories, and especially with other commands like 'grep' that we talked about in lab report 3. So we do actually have the `-type` option to conveniently single out either files or directories using the following code:
+
+```
+find -type [type input]
+```
 
 ## Example 1: 
 
@@ -122,6 +127,18 @@ As you can see, the long list of files are not included; there are only director
 This is extremely helpful to have, since we can redirect the output all the file names/paths and use it as a list to bulk modify the files for some other purposes. 
 
 
+
+# Option 2: -name 
+
+Another option we will look at today is `-name`. This is selected through the github repo [https://math2001.github.io/article/bashs-find-command/](https://math2001.github.io/article/bashs-find-command/).
+
+This will help us differentiate between different files with their names and further specify the file we want. The syntax is as follows:
+
+```
+find -name [name input]
+```
+
+## Example 1:
 
 
 
