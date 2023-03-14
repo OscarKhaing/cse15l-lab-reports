@@ -69,7 +69,7 @@ $ find
 ```
 
 
-As you can see, it returns all of _non-fiction_, _OUP_, and _Abernathy_, which are directories, and assorted `.txt` files, which are files.
+As you can see, it returns all of `non-fiction`, `OUP`, and `Abernathy`, which are directories, and assorted `.txt` files, which are files.
 
 But as you know, _bash_ differentiates very distinctly between files and directories, and especially with other commands like 'grep' that we talked about in lab report 3. So we do actually have the `-type` option to conveniently single out either files or directories using the following code:
 
@@ -104,7 +104,7 @@ $ find -type f
 
 As you can see, the directories are no longer in the output of the list of found "things". 
 
-In contrast with the previous call, this time, directories like _non-fiction_ are not there.
+In contrast with the previous call, this time, directories like `non-fiction` are not there.
 
 ## Example 2:
 
@@ -264,7 +264,7 @@ As you can see, the command returned only directories, since there are no files 
 
 ## Example 2:
 
-However, once we change it to depth 3 with `find -maxdepth 3`, the output starts including the files from travel_guides. 
+However, once we change it to depth 3 with `find -maxdepth 3`, the output starts including the files from `travel_guides`. 
 
 ```
 $ find -maxdepth 3
